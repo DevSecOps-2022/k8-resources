@@ -7,11 +7,10 @@ metadata:
     environment: dev
     project: roboshop
 spec:
-  contaainers:
+  containers:
     - name: nginx
-      imagee: nginx:latest
+      image: nginx:latest
       ports:
-        -containerPort: 80
+        - containerPort: 80
     - name: almalinux
       image: almalinu:latest
-      
