@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-configmap
+data:
+  name: "N Hanumanth Reddy"
+  project: roboshop
+  environment: dev
