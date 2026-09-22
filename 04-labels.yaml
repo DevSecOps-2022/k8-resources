@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: labels-pod
+  namespace: roboshop
+  labels:
+    environment: dev
+    project: roboshop
+spec:
+  containers:
+    - name: nginx-labels
+      image: nginx:latest
+
+#  labels adds metadata to the kubernetes resources. These are selectors inside kubernetes resources.
+#  We can select the K8s resources based on these labels. We can't use special characters in labels. Max size is 63 characters. 
