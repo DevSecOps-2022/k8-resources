@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metaddata:
+  name: niginx-resoutrces
+spec:
+  containers:
+    - name: nginx-resources
+      image: nginx:latest
+      resources: #soft limits for the container.
+        requests:
+          memory: "128Mi"
+          cpu: "100m"
+        limits: # Hard limits for the container.
+          memory: "256Mi"
+          cpu: "200m"
