@@ -6,3 +6,4 @@ data:
   name: "N Hanumanth Reddy"
   project: roboshop
   environment: dev
+  test: "This is a configmap for nginx pod"
