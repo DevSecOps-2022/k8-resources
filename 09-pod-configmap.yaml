@@ -7,5 +7,5 @@ spec:
     - name: nginx
       image: nginx:latest
       envFrom:
-        - configmapRef:
+        - configMapRef:
             name: nginx-configmap
