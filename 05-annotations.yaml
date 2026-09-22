@@ -1,19 +1,19 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name:nginx-annotations
+  name: nginx-annotations
   namespace: roboshop
   labels:
-    environment: dev
-    project: roboshop
+      environment: dev
+      project: roboshop
   annotations:
-    description: This is a pod with annotations examples
-    owner: N Hanumanth Reddy
-    dockerhub: https://hub.docker.com/
+      description: This is a pod with annotations examples
+      owner: N Hanumanth Reddy
+      dockerhub: "https://hub.docker.com/"
 spec:
   containers:
     - name: nginx-annotations
-      image: nginx-latest
+      image: nginx:latest
 
 # Annotations are key-value pairs used to attach non-identifying metadata to Kubernetes Resources. Kubernetes does not use annotations for resource selection or grouping.
 # They are commonly consumed by external tools such as Prometheus, ArgoCD, Jenkins, and AWS Load Balancer Controller. Annotations support special characters and can store larger amounts of data, with a maximum combined size of 256 KB per object.
