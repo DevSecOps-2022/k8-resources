@@ -1,26 +1,30 @@
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: Deployment
 metadata:
-  name: frontend
+  name: nginx
   labels:
-    Project: roboshop
-    tier: frontend
+    project: roboshop
     component: frontend
+    tier: frontend
+    purpose: Deployment
 spec:
-  # modify replicas according to your case
   replicas: 3
   selector:
     matchLabels:
       project: roboshop
-      tier: frontend
       component: frontend
+      tier: frontend
+      purpose: Deployment
   template:
     metadata:
       labels:
         project: roboshop
         component: frontend
         tier: frontend
+        purpose: Deployment
     spec:
       containers:
       - name: nginx
         image: nginx:1.14.2
+        ports:
+        - containerPort: 80
