@@ -17,6 +17,8 @@ spec:
   template:
     metadata:
       labels:
+        project: roboshop
+        component: frontend
         tier: frontend
     spec:
       containers:
